@@ -6,6 +6,8 @@ _showAll = false;
 
 hitPoints = getAllHitPointsDamage _veh;
 totalDmg = damage _veh;
+
+_string = composeText[_string, getText (configFile >> "cfgVehicles" >> typeOf vehicle _veh >> "displayName"), lineBreak];
 _string = composeText[_string, "Total dmg: ", '    ', str totalDmg, lineBreak];
 
 if (count hitPoints != 0) then { 

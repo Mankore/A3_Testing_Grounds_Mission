@@ -33,9 +33,11 @@ _atv addEventHandler ["Fired",
 
 		_ts = (configfile >> "CfgAmmo" >> _ammoName >> "typicalSpeed") call BIS_fnc_getCfgData;
 		
+		_airFriction = (configfile >> "CfgAmmo" >> _ammoName >> "airFriction") call BIS_fnc_getCfgData;
+
 		_penRHA = _caliber * _ts * 15 / 1000;
 
-		systemChat format ["caliber: %1, typicalSpeed: %2", _caliber, _ts]; 
+		systemChat format ["caliber: %1, typicalSpeed: %2, airFriction: %3", _caliber, _ts, _airFriction]; 
 		systemChat format ["Penetration RHA:%1", _penRHA];
 	}
 ];

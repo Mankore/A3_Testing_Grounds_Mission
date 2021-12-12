@@ -1,5 +1,10 @@
+fncAddVehicleEventHandlers = {
+	params ["_veh"];
+	_veh addEventHandler ["Killed", fncKilledHandler];
+	_veh addEventHandler ["Hit", {[_this select 0] execVM "showHPListener.sqf"}];
+};
+
 fncKilledHandler = {
-	hintSilent "";	
 		[_this select 0] spawn {
 			params ["_veh"];
 			sleep 0.5;
@@ -15,18 +20,17 @@ fncKilledHandler = {
 
 			_veh = createVehicle [_name, _pos, [], 0, "CAN_COLLIDE"];
 			_veh setDir _dir; 
-			_veh addEventHandler ["Killed", fncKilledHandler];
-			_veh addEventHandler ["Hit", {[_this select 0] execVM "showHPListener.sqf"}];
+
+			[_veh] call fncAddVehicleEventHandlers;
 		};
 };
 
 fncCreateTargetVehicle = {
 	params ["_vehName", "_position", "_rotation", "_playerDir"];
-	_vehicle = _vehName createVehicle _position;
-	_vehicle setDir _playerDir + _rotation;
+	_veh = _vehName createVehicle _position;
+	_veh setDir _playerDir + _rotation;
 
-	_vehicle addEventHandler ["Killed", fncKilledHandler];
-	_vehicle addEventHandler ["Hit", {[_this select 0] execVM "showHPListener.sqf"}]; 
+	[_veh] call fncAddVehicleEventHandlers;
 };
 
 
