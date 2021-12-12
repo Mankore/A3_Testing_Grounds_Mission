@@ -1,4 +1,4 @@
-class dialogTest1
+class choseVehicleDialog
 {
 	idd = 1234;
 	class controls {

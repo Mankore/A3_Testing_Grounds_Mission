@@ -1,4 +1,4 @@
-createDialog "dialogTest1";
+createDialog "choseVehicleDialog";
 
 _ctrlTarget = (findDisplay 1234) displayCtrl 1500;
 _distanceSlider = (findDisplay 1234) displayCtrl 1900;
