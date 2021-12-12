@@ -5,6 +5,7 @@ glSelIdx = 0;
 // Second array entry for custom description
 allVehicles = [
 	// Reds
+	["rhs_tigr_m_vv", "MHQ RED"],
 	["rhsgref_ins_uaz_spg9", "SPG"],
 	["rhs_btr80_vdv", "RHS BTR 80"],
 	["CUP_O_BTR90_RU", "CUP BTR 90"],
@@ -39,6 +40,7 @@ allVehicles = [
 	["rhs_t90sm_tv", "T90 SM"],
 	["rhs_t14_noKAZ", "T14"],
 	// Blues
+	["rhsusf_m1025_w", "MHQ BLUE"],
 	["CUP_B_LAV25M240_USMC", "CUP LAV"],
 	["CUP_B_Dingo_CZ_Wdl", "CUP Dingo"],
 	["CUP_B_RG31_M2_USA", "CUP RG31"],
