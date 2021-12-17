@@ -1,6 +1,8 @@
-cutRsc ["ExampleTitle","PLAIN"];
-_display = findDisplay 1235;
+"TAG_textLayer" cutRsc ["ExampleTitle","PLAIN"];
 
-_idc = 1100;
-_ctrl = _display displayCtrl _idc;
-_ctrl ctrlSetStructuredText (parseText "TEXTETXTEXT");
+waitUntil {!isNull (uiNameSpace getVariable "leftTextLog")};
+	_display = uiNameSpace getVariable "leftTextLog";
+	_idc = 1100;
+	leftTextControl = _display displayCtrl 1100;
+
+	

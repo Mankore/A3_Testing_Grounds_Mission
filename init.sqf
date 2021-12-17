@@ -8,7 +8,12 @@ allVehicles = [
 	["rhs_tigr_m_vv", "MHQ RED"],
 	["rhsgref_ins_uaz_spg9", "SPG"],
 	["rhs_btr80_vdv", "RHS BTR 80"],
+	["CUP_O_BTR80_GREEN_RU", "CUP BTR 80"],
+	["rhs_btr80a_vdv", "RHS BTR 80A"],
+	["CUP_O_BTR80A_GREEN_RU", "CUP BTR 80A"],
+	["CUP_O_Hilux_metis_TK_INS", "HILUX METIS"],
 	["CUP_O_BTR90_RU", "CUP BTR 90"],
+	["CUP_O_BRDM2_ATGM_RUS", "CUP SPandrel"],
 	["rhsgref_BRDM2_ATGM_vdv", "RHS BRDM"],
 	["rhs_zsu234_aa", "ZSU"],
 	["O_APC_Tracked_02_AA_F", "AA"],
@@ -44,6 +49,10 @@ allVehicles = [
 	["CUP_B_LAV25M240_USMC", "CUP LAV"],
 	["CUP_B_Dingo_CZ_Wdl", "CUP Dingo"],
 	["CUP_B_RG31_M2_USA", "CUP RG31"],
+	["rhsusf_m1240a1_m2crows_usmc_wd", "RHS CROWS M2"],
+	["rhsusf_M1220_M153_M2_usarmy_d", "RHS CROWS M2"],
+	["rhsusf_M1238A1_M2_socom_d", "RHS CROWS M2"],
+	["CUP_B_Boxer_HMG_GER_WDL", "RHS CROWS M2"],
 	["rhsusf_stryker_m1126_m2_wd", "RHS Stryker M2"],
 	["CUP_B_HMMWV_Crows_M2_USA", "CUP HMMWV CROWS M2"],
 	["CUP_B_M1128_MGS_Woodland", "CUP M1128 MGS"],
@@ -80,9 +89,9 @@ player addAction ["<t color='#FF0000'>.A_Open Dialog</t>", {
 }];
 
 /* Title Rsc, can't set text here for some reason */
-// player addAction ["Open Rsc", {
-// 	execVM "openRsc.sqf";	
-// }];
+player addAction ["Open Rsc", {
+	execVM "openRsc.sqf";	
+}];
 
 
 [] spawn

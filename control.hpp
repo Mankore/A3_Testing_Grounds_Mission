@@ -95,8 +95,12 @@ class RscTitles
 	class ExampleTitle
 	{    
 		idd = 1235;
-		duration = 10; //1 min
 		// onLoad = "_this call onRscLoad"; //UI event handler
+		duration =  99999;
+        fadein =  0.1;
+        fadeout =  2;
+        name = "leftTextLog";
+		onLoad = "with uiNameSpace do { leftTextLog = _this select 0 }";
 		class controls
 		{
 			class backgroundLeft: IGUIBack
@@ -115,7 +119,7 @@ class RscTitles
 				y = 0.247 * safezoneH + safezoneY;
 				w = 0.149531 * safezoneW;
 				h = 0.517 * safezoneH;
-				text = "1100";
+				text = "";
 			};
 
 		};	
