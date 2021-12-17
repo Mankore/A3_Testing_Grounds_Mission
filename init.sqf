@@ -101,7 +101,7 @@ player addAction ["<t color='#FF0000'>.A_Open Dialog</t>", {
 		if (_keyCode == 15) then {
 			player removeWeapon (currentWeapon player);
 			[player, "rhs_weap_rpg75", 1] call BIS_fnc_addWeapon;
-			player selectWeapon "rhs_weap_rpg26";
+			player selectWeapon "rhs_weap_rpg75";
 		};
 	}];
 };
