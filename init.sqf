@@ -79,13 +79,11 @@ player addAction ["<t color='#FF0000'>.A_Open Dialog</t>", {
 	execVM "openDialog.sqf";	
 }];
 
+/* Title Rsc, can't set text here for some reason */
+// player addAction ["Open Rsc", {
+// 	execVM "openRsc.sqf";	
+// }];
 
-
-// Flag if HP script is running
-isHPRunning = false;
-
-// Global HP Script handler
-hpHandle = "global";
 
 [] spawn
 {
@@ -102,21 +100,8 @@ hpHandle = "global";
 	// 15 == TAB key
 		if (_keyCode == 15) then {
 			player removeWeapon (currentWeapon player);
-			[player, "rhs_weap_rpg26", 1] call BIS_fnc_addWeapon;
+			[player, "rhs_weap_rpg75", 1] call BIS_fnc_addWeapon;
 			player selectWeapon "rhs_weap_rpg26";
-
-			
-			// hint (currentWeapon player);
-			// if (isHPRunning) then {
-			// 	systemChat "Stopped HitPoints script";		
-			// 	isHPRunning = false;
-			// 	terminate hpHandle;
-			// } else {
-			// 	systemChat "Starting HitPoints script";		
-			// 	isHPRunning = true;
-			// 	hpHandle = execVM "showHitpoints.sqf";
-			// };
-			// systemChat format ["run: %1", isHPRunning];
 		};
 	}];
 };

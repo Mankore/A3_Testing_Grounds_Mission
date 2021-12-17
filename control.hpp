@@ -90,3 +90,35 @@ class choseVehicleDialog
 	};
 }
 
+class RscTitles
+{
+	class ExampleTitle
+	{    
+		idd = 1235;
+		duration = 10; //1 min
+		// onLoad = "_this call onRscLoad"; //UI event handler
+		class controls
+		{
+			class backgroundLeft: IGUIBack
+			{
+				idc = 2200;
+				x = -0.000156274 * safezoneW + safezoneX;
+				y = 0.225 * safezoneH + safezoneY;
+				w = 0.159844 * safezoneW;
+				h = 0.55 * safezoneH;
+				colorBackground[] = {0,0,0,0.5};
+			};
+			class leftTextLog: RscStructuredText
+			{
+				idc = 1100;
+				x = 0.00499997 * safezoneW + safezoneX;
+				y = 0.247 * safezoneH + safezoneY;
+				w = 0.149531 * safezoneW;
+				h = 0.517 * safezoneH;
+				text = "1100";
+			};
+
+		};	
+	};
+};
+
