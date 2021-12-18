@@ -14,11 +14,11 @@ _indirectHitRange = _ammo select 2;
 _explosive = _ammo select 3;
 _ammoName = _ammo select 4;
 
-_text = composeText[_text, lineBreak, str _selection, ' Was hit with ', _ammoName, lineBreak];
+_text = parseText format ["%1 %2 Was hit with %3 <br/>", _text, str _selection, _ammoName];
 
 // if !(isnil "_selection") then {
-if ((_selection select 0) != "") then {
-	// systemChat format ["%1", _selection];
-};
+// if ((_selection select 0) != "") then {
+// 	systemChat format ["%1", _selection];
+// };
 
 leftTextControl ctrlSetStructuredText _text;
