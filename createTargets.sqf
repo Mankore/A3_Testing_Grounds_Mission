@@ -3,9 +3,9 @@ fncAddVehicleEventHandlers = {
 	_veh addEventHandler ["Killed", fncKilledHandler];
 	_veh addEventHandler ["Hit", {[_this select 0] execVM "showHPListener.sqf"}];
 	// _veh addEventHandler ["HandleDamage", {[_this select 0] execVM "damageListener.sqf"}];
-	_veh addEventHandler ["HitPart", {
-			[_this select 0] execVM "damageListener.sqf";
-	}];
+	// _veh addEventHandler ["HitPart", {
+	// 		[_this select 0] execVM "damageListener.sqf";
+	// }];
 };
 
 fncKilledHandler = {

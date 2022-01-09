@@ -54,6 +54,7 @@ allVehicles = [
 	["rhsusf_M1238A1_M2_socom_d", "RHS CROWS M2"],
 	["CUP_B_Boxer_HMG_GER_WDL", "RHS CROWS M2"],
 	["rhsusf_stryker_m1126_m2_wd", "RHS Stryker M2"],
+	["rhsusf_m1165a1_gmv_m134d_m240_socom_d", "HMMW M134D"],
 	["CUP_B_HMMWV_Crows_M2_USA", "CUP HMMWV CROWS M2"],
 	["CUP_B_M1128_MGS_Woodland", "CUP M1128 MGS"],
 	["rhsusf_stryker_m1134_wd", "RHS Stryker M1134"],

@@ -17,6 +17,7 @@ _atv addEventHandler ["Fired",
 	{
 		// Endless ammo
 		(_this select 0) setVehicleAmmo 1;
+		(_this select 0) setWeaponReloadingTime [_gunner, _muzzle, 0];
 		
 		// Ammo stats
 		_ammoName = (_this select 4);
