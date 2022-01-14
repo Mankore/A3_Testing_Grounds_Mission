@@ -15,9 +15,10 @@ player moveInGunner _atv;
 
 _atv addEventHandler ["Fired",
 	{
+		params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_gunner"]; 
 		// Endless ammo
 		(_this select 0) setVehicleAmmo 1;
-		(_this select 0) setWeaponReloadingTime [_gunner, _muzzle, 0];
+		// (_this select 0) setWeaponReloadingTime [_gunner, _muzzle, 0];
 		
 		// Ammo stats
 		_ammoName = (_this select 4);
@@ -36,9 +37,11 @@ _atv addEventHandler ["Fired",
 		
 		_airFriction = (configfile >> "CfgAmmo" >> _ammoName >> "airFriction") call BIS_fnc_getCfgData;
 
+		_hitValue = (configfile >> "CfgAmmo" >> _ammoName >> "hit") call BIS_fnc_getCfgData;
+
 		_penRHA = _caliber * _ts * 15 / 1000;
 
-		systemChat format ["caliber: %1, typicalSpeed: %2, airFriction: %3", _caliber, _ts, _airFriction]; 
+		systemChat format ["caliber: %1, typicalSpeed: %2, airFriction: %3, hit: %4", _caliber, _ts, _airFriction, __hitValue]; 
 		systemChat format ["Penetration RHA:%1", _penRHA];
 	}
 ];
