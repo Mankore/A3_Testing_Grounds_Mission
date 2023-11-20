@@ -1,4 +1,4 @@
-class choseVehicleDialog
+class chooseVehicleDialog
 {
 	idd = 1234;
 	class controls {
@@ -18,13 +18,15 @@ class choseVehicleDialog
 			w = 0.4125 * safezoneW;
 			h = 0.55 * safezoneH;
 		};
-		class targetVehicleList: RscListbox
+		class redVehicleList: RscListBox
 		{
 			idc = 1500;
-			x = 0.314375 * safezoneW + safezoneX;
-			y = 0.28 * safezoneH + safezoneY;
-			w = 0.113437 * safezoneW;
-			h = 0.242 * safezoneH;
+			onLBSelChanged = "redSelectedIdx = _this select 1; lastSelectedShop = 0;";
+
+			x = 0.304062 * safezoneW + safezoneX;
+			y = 0.269 * safezoneH + safezoneY;
+			w = 0.185625 * safezoneW;
+			h = 0.264 * safezoneH;
 			colorBackground[] = {0.5,0.5,0.5,0.5};
 			class ListScrollBar
 			{
@@ -34,27 +36,45 @@ class choseVehicleDialog
 				arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
 				border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa";
 			};
-			onLBSelChanged = "glSelIdx = _this select 1;"
+		};
+		class blueVehicleList: RscListBox
+		{
+			idc = 1501;
+			onLBSelChanged = "blueSelectedIdx = _this select 1; lastSelectedShop = 1;";
+
+			x = 0.510312 * safezoneW + safezoneX;
+			y = 0.269 * safezoneH + safezoneY;
+			w = 0.185625 * safezoneW;
+			h = 0.264 * safezoneH;
+			colorBackground[] = {0.5,0.5,0.5,0.5};
+			class ListScrollBar
+			{
+				color[] = {1,1,1,1};
+				thumb = "\A3\ui_f\data\gui\cfg\scrollbar\thumb_ca.paa";
+				arrowFull = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa";
+				arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
+				border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa";
+			};
 		};
 		class targetVehicleButton: RscButton
 		{
 			idc = 1600;
-			text = "Select Target"; //--- ToDo: Localize;
-			x = 0.314375 * safezoneW + safezoneX;
-			y = 0.555 * safezoneH + safezoneY;
+
+			text = "Spawn Targets"; //--- ToDo: Localize;
+			x = 0.304062 * safezoneW + safezoneX;
+			y = 0.577 * safezoneH + safezoneY;
 			w = 0.113437 * safezoneW;
 			h = 0.055 * safezoneH;
-			action = "[(allVehicles select (lbCurSel 1500)) select 0, glDistance] execVM 'createTargets.sqf';";
 		};
 		class playerVehicleButton: RscButton
 		{
 			idc = 1601;
+
 			text = "Select Player Vehicle"; //--- ToDo: Localize;
-			x = 0.474219 * safezoneW + safezoneX;
-			y = 0.555 * safezoneH + safezoneY;
+			x = 0.510312 * safezoneW + safezoneX;
+			y = 0.577 * safezoneH + safezoneY;
 			w = 0.113437 * safezoneW;
 			h = 0.055 * safezoneH;
-			action = "[(allVehicles select (lbCurSel 1500)) select 0] execVM 'createPlayerVehicle.sqf';";
 		};
 		class distanceSlider: RscSlider
 		{
@@ -67,7 +87,7 @@ class choseVehicleDialog
 			h = 0.055 * safezoneH;
 			sliderRange[] = {50,4000};
 			sliderStep = 50;
-			onSliderPosChanged = "glDistance = _this select 1; ctrlSetText [1001, format ['Distance: %1', (_this select 1)]];"
+			onSliderPosChanged = "targetDistance = _this select 1; ctrlSetText [1001, format ['Distance: %1', (_this select 1)]];"
 
 			color[] = {1,1,1,0.6};
 			colorActive[] = {1,1,1,0.5};
@@ -87,6 +107,24 @@ class choseVehicleDialog
 			w = 0.159844 * safezoneW;
 			h = 0.033 * safezoneH;
 		};	
+		class RscText_1003: RscText
+		{
+			idc = 1003;
+			text = "Red Shop"; //--- ToDo: Localize;
+			x = 0.304062 * safezoneW + safezoneX;
+			y = 0.236 * safezoneH + safezoneY;
+			w = 0.0979687 * safezoneW;
+			h = 0.033 * safezoneH;
+		};
+		class RscText_1004: RscText
+		{
+			idc = 1004;
+			text = "Blue Shop"; //--- ToDo: Localize;
+			x = 0.515469 * safezoneW + safezoneX;
+			y = 0.236 * safezoneH + safezoneY;
+			w = 0.0721875 * safezoneW;
+			h = 0.033 * safezoneH;
+		};
 	};
 }
 
@@ -125,4 +163,3 @@ class RscTitles
 		};	
 	};
 };
-

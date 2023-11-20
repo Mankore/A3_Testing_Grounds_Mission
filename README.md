@@ -1,5 +1,7 @@
-Arma 3 Editor mission to test vehicles and their armor/penetrability
+Arma 3 Editor mission to test vehicles and their armor/penetrability (US66 Choice of vehicles)
 
-Use "A_Open_Dialog" MWheel action to open dialog and choose Target/Player vehicles
+Use "Choose Vehicle" MWheel action to open dialog and choose Target/Player vehicles
 
-Tab to equip/replenish launcher ammo
+Edit GUI: 
+1. Ctrl + I
+2. missionConfigfile >> "chooseVehicleDialog" 
