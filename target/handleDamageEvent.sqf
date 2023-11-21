@@ -2,6 +2,10 @@ params ["_unit", "_selection", "_damage", "_source", "_projectile", "_hitIndex",
 
 if (!isNull (uiNameSpace getVariable "leftTextControl")) then {
 	_leftTextControl = uiNameSpace getVariable "leftTextControl";
+	// _size = lbSize _leftTextControl; // need some sort of debounce to reduce amount of items in listbox
+	// if (_size > 50) then {
+	// 	lbClear _leftTextControl;
+	// };
 
 	_text = if (_hitpoint != "") then { _hitpoint } else { "TOTAL" };
 
