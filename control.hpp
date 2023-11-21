@@ -179,7 +179,7 @@ class RscTitles
 				x = 0.577344 * safezoneW + safezoneX;
 				y = 0.236 * safezoneH + safezoneY;
 				w = 0.113437 * safezoneW;
-				h = 0.253 * safezoneH;
+				h = 0.506 * safezoneH;
 			};
 			class DamageTrackerText: RscStructuredText
 			{
@@ -187,7 +187,7 @@ class RscTitles
 				x = 0.5825 * safezoneW + safezoneX;
 				y = 0.247 * safezoneH + safezoneY;
 				w = 0.103125 * safezoneW;
-				h = 0.231 * safezoneH;
+				h = 0.462 * safezoneH;
 			};
 		}
 	}
