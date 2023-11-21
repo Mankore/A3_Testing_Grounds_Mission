@@ -1,26 +1,4 @@
-params ["_vehName"];
-
-_playerDir = getDir vehicle player;
-
-// if player in vehicle
-if !(isNull objectParent player) then {
-	deleteVehicle vehicle player;
-};
-
-_actPos = getPos player;
-_veh = _vehName createVehicle _actPos;
-_veh setDir _playerDir;
-
-if ((!isNull gunner _veh) || (_veh emptyPositions "gunner" > 0)) then {
-	// if vehicle has gunner seat
-	player moveInGunner _veh;
-} else {
-	player moveInDriver _veh;
-};
-
-_veh addEventHandler ["Fired",
-	{
-		params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_gunner"];
+params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_gunner"];
 		// Endless ammo
 		(_this select 0) setVehicleAmmo 1;
 		// (_this select 0) setWeaponReloadingTime [_gunner, _muzzle, 0];
@@ -46,7 +24,5 @@ _veh addEventHandler ["Fired",
 
 		_penRHA = _caliber * _ts * 15 / 1000;
 
-		systemChat format ["caliber: %1, typicalSpeed: %2, airFriction: %3, hit: %4", _caliber, _ts, _airFriction, __hitValue];
+		systemChat format ["caliber: %1, typicalSpeed: %2, airFriction: %3, hit: %4", _caliber, _ts, _airFriction, _hitValue];
 		systemChat format ["Penetration RHA:%1", _penRHA];
-	}
-];

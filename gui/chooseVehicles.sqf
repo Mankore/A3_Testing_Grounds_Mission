@@ -29,8 +29,8 @@ vehicleMap = createHashMapFromArray [["0", RedShop], ["1", BlueShop]];
 lbSetCurSel [_targetRedIdc, redSelectedIdx];
 lbSetCurSel [_targetBlueIdc, blueSelectedIdx];
 
-_ctrlTargetVehicleButton buttonSetAction "[(vehicleMap get str(lastSelectedShop) select (lbCurSel (ctrlMap get str(lastSelectedShop)))) select 0, targetDistance] execVM 'createTargets.sqf';";
-_ctrlPlayerVehicleButton buttonSetAction "[(vehicleMap get str(lastSelectedShop) select (lbCurSel (ctrlMap get str(lastSelectedShop)))) select 0] execVM 'createPlayerVehicle.sqf';";
+_ctrlTargetVehicleButton buttonSetAction "[(vehicleMap get str(lastSelectedShop) select (lbCurSel (ctrlMap get str(lastSelectedShop)))) select 0, targetDistance] execVM 'target\createTargets.sqf';";
+_ctrlPlayerVehicleButton buttonSetAction "[(vehicleMap get str(lastSelectedShop) select (lbCurSel (ctrlMap get str(lastSelectedShop)))) select 0] execVM 'player\createPlayerVehicle.sqf';";
 
 _distanceSlider sliderSetPosition targetDistance;
 _distanceText ctrlSetText format ["Distance: %1", targetDistance];

@@ -1,11 +1,8 @@
 fncAddVehicleEventHandlers = {
 	params ["_veh"];
 	_veh addEventHandler ["Killed", fncKilledHandler];
-	_veh addEventHandler ["Hit", {[_this select 0] execVM "showHPListener.sqf"}];
-	// _veh addEventHandler ["HandleDamage", {[_this select 0] execVM "damageListener.sqf"}];
-	// _veh addEventHandler ["HitPart", {
-	// 		[_this select 0] execVM "damageListener.sqf";
-	// }];
+	_veh addEventHandler ["Hit", {[_this select 0] execVM "target\showHPListener.sqf"}];
+	_veh addEventHandler ["HandleDamage", {_this execVM "target\handleDamageEvent.sqf"; _this select 2;}];
 };
 
 fncKilledHandler = {
@@ -58,17 +55,19 @@ _degree = acos _cos;
 // Calculated spread in degrees between targets
 _tarSpread = _degree / 2; 
 
-_sideDistance = 20; 
-
 _relpos = _vehiclePlayer getRelPos [_distance, 0]; 
 _relpos1 = _vehiclePlayer getRelPos [_distance, _tarSpread]; 
 _relpos2 = _vehiclePlayer getRelPos [_distance, -_tarSpread]; 
+_relpos3 = _vehiclePlayer getRelPos [_distance, -_tarSpread*2]; 
 
 [_tarName, _relpos, 0, _playerDir] call fncCreateTargetVehicle;
 [_tarName, _relpos1, 90 + _tarSpread, _playerDir] call fncCreateTargetVehicle;
 [_tarName, _relpos2, 180 - _tarSpread, _playerDir] call fncCreateTargetVehicle;
+[_tarName, _relpos3, 270 - _tarSpread * 2, _playerDir] call fncCreateTargetVehicle;
 
 // Side targets 
+
+_sideDistance = 20; 
 
 _sideRelpos = _vehiclePlayer getRelPos [_sideDistance, 90]; 
 

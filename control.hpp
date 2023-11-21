@@ -130,15 +130,13 @@ class chooseVehicleDialog
 
 class RscTitles
 {
-	class ExampleTitle
+	class DamageSideLog
 	{    
 		idd = 1235;
-		// onLoad = "_this call onRscLoad"; //UI event handler
+		onLoad = "uiNamespace setVariable ['DamageSideLog', _this select 0];";
 		duration =  99999;
         fadein =  0.1;
         fadeout =  2;
-        name = "leftTextLog";
-		onLoad = "with uiNameSpace do { leftTextLog = _this select 0 }";
 		class controls
 		{
 			class backgroundLeft: IGUIBack
@@ -150,16 +148,21 @@ class RscTitles
 				h = 0.55 * safezoneH;
 				colorBackground[] = {0,0,0,0.5};
 			};
-			class leftTextLog: RscStructuredText
+			class leftListbox: RscListbox
 			{
-				idc = 1100;
-				x = 0.00499997 * safezoneW + safezoneX;
+				idc = 1500;
+				x = 0.005 * safezoneW + safezoneX;
 				y = 0.247 * safezoneH + safezoneY;
-				w = 0.149531 * safezoneW;
-				h = 0.517 * safezoneH;
-				text = "";
+				w = 0.144375 * safezoneW;
+				h = 0.506 * safezoneH;
+				class ListScrollBar
+				{
+					color[] = {0,0,0,0};
+					shadow = 0;
+					width = 0;
+					height = 0;
+				};
 			};
-
 		};	
 	};
 };
