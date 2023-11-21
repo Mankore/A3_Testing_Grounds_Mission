@@ -1,4 +1,4 @@
-"TAG_textLayer" cutRsc ["DamageSideLog", "PLAIN"];
+"MKR_SideLayer" cutRsc ["DamageSideLog", "PLAIN"];
 
 _display = uiNameSpace getVariable "DamageSideLog";
 _idc = 1500;

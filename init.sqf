@@ -14,6 +14,10 @@ player addAction ["<t color='#FF0000'>Chose Vehicles</t>", {
 
 player addAction ["Toggle Damage Log", {
 	execVM "gui\damageSideLog.sqf";
+}, nil, 997];
+
+player addAction ["Show Damage Tracker", {
+	execVM "gui\damageTracker.sqf";
 }, nil, 998];
 
 // spawn launcher
