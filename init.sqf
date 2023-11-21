@@ -16,7 +16,7 @@ player addAction ["Toggle Damage Log", {
 	execVM "gui\damageSideLog.sqf";
 }, nil, 997];
 
-player addAction ["Show Damage Tracker", {
+player addAction ["Toggle Damage Tracker", {
 	execVM "gui\damageTracker.sqf";
 }, nil, 998];
 
