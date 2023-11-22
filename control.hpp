@@ -21,8 +21,6 @@ class chooseVehicleDialog
 		class redVehicleList: RscListBox
 		{
 			idc = 1500;
-			onLBSelChanged = "redSelectedIdx = _this select 1; lastSelectedShop = 0;";
-
 			x = 0.304062 * safezoneW + safezoneX;
 			y = 0.269 * safezoneH + safezoneY;
 			w = 0.185625 * safezoneW;
@@ -40,8 +38,6 @@ class chooseVehicleDialog
 		class blueVehicleList: RscListBox
 		{
 			idc = 1501;
-			onLBSelChanged = "blueSelectedIdx = _this select 1; lastSelectedShop = 1;";
-
 			x = 0.510312 * safezoneW + safezoneX;
 			y = 0.269 * safezoneH + safezoneY;
 			w = 0.185625 * safezoneW;
@@ -124,6 +120,22 @@ class chooseVehicleDialog
 			y = 0.236 * safezoneH + safezoneY;
 			w = 0.0721875 * safezoneW;
 			h = 0.033 * safezoneH;
+		};
+		class rightBackground: IGUIBack
+		{
+			idc = 2201;
+			x = 0.721719 * safezoneW + safezoneX;
+			y = -0.00599999 * safezoneH + safezoneY;
+			w = 0.278437 * safezoneW;
+			h = 1.001 * safezoneH;
+		};
+		class rightTextContainer: RscStructuredText
+		{
+			idc = 1100;
+			x = 0.732032 * safezoneW + safezoneX;
+			y = 0.038 * safezoneH + safezoneY;
+			w = 0.257813 * safezoneW;
+			h = 0.935 * safezoneH;
 		};
 	};
 }
