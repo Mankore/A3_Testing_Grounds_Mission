@@ -15,7 +15,7 @@ _ctrlTargetRed ctrlAddEventHandler ["LBSelChanged", {
 	lastSelectedShop = 0;
 
 	_shopEntry = RedShop select redSelectedIdx;
-	[_shopEntry select 0] call compile preprocessFile "gui\vehicleInfo.sqf";
+	[_shopEntry select 0] call compile preprocessFile "gui\chooseVehicles\vehicleInfo.sqf";
 }];
 
 _ctrlTargetBlue ctrlAddEventHandler ["LBSelChanged", {
@@ -23,7 +23,7 @@ _ctrlTargetBlue ctrlAddEventHandler ["LBSelChanged", {
 	lastSelectedShop = 1;
 
 	_shopEntry = BlueShop select blueSelectedIdx;
-	[_shopEntry select 0] call compile preprocessFile "gui\vehicleInfo.sqf";
+	[_shopEntry select 0] call compile preprocessFile "gui\chooseVehicles\vehicleInfo.sqf";
 }];
 
 _distanceSlider = _display displayCtrl 1900;

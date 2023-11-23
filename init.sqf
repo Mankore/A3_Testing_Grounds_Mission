@@ -9,7 +9,7 @@ RedShop = call compile preprocessFile "shops\red.sqf";
 BlueShop = call compile preprocessFile "shops\blue.sqf";
 
 player addAction ["<t color='#FF0000'>Chose Vehicles</t>", {
-	execVM "gui\chooseVehicles.sqf";
+	execVM "gui\chooseVehicles\init.sqf";
 }, nil, 999];
 
 player addAction ["Toggle Damage Log", {
