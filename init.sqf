@@ -13,7 +13,7 @@ player addAction ["<t color='#FF0000'>Chose Vehicles</t>", {
 }, nil, 999];
 
 player addAction ["Toggle Damage Log", {
-	execVM "gui\damageSideLog.sqf";
+	execVM "gui\damageSideLog\toggle.sqf";
 }, nil, 997];
 
 player addAction ["Toggle Damage Tracker", {
