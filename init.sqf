@@ -17,7 +17,7 @@ player addAction ["Toggle Damage Log", {
 }, nil, 997];
 
 player addAction ["Toggle Damage Tracker", {
-	execVM "gui\damageTracker.sqf";
+	execVM "gui\damageTracker\toggle.sqf";
 }, nil, 998];
 
 // spawn launcher
