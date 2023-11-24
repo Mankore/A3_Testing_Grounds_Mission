@@ -13,7 +13,6 @@ if (!isNull (uiNameSpace getVariable "listboxControl")) then {
 
 	_index = _listboxControl lbAdd format ["%1: %2", listBoxCounter,  _text];
 	if (!isNil "_textColor") then {
-		hint str _textColor;
 		_listboxControl lbSetColor [_index, _textColor];
 	};
 
