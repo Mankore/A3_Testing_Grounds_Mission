@@ -25,11 +25,10 @@ if (count _hitPoints != 0) then {
 			if (_Indx != -1) then {
 				_name = _hitNames select _Indx;
 				_hitValue = str (_hitValues select _Indx);
-
-				if (_name == "hithull" || _name == "hitammo" || _name == "hitammohull") then {
-					_name = parseText format["<t color='#ff0000'>%1</t>", _name];
-					_hitValue = parseText format["<t color='#ff0000'>%1</t>", _hitValue];
-				};
+				_color = [_name] call compile preprocessFile "target\utils\getHEXColorByHitpoint.sqf";
+				
+				_name = parseText format["<t color='%2'>%1</t>", _name, _color];
+				_hitValue = parseText format["<t color='%2'>%1</t>", _hitValue, _color];
 
 				_string = composeText[_string, _name, ' ', _hitValue, lineBreak];
 			};
