@@ -17,4 +17,5 @@
 	_veh setDir _dir;
 
 	[_veh] call compile preprocessFile "target\addVehicleHandlers.sqf";
+	[_veh] call compile preprocessFile "target\createCrew.sqf";
 };

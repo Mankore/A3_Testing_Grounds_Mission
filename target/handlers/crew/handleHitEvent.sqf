@@ -1,4 +1,4 @@
-params ["_unit", "_selection", "_damage", "_source", "_projectile", "_hitIndex", "_instigator", "_hitPoint", "_directHit"];
+params ["_unit", "_source", "_damage", "_instigator"];
 
 _veh = vehicle _unit;
 

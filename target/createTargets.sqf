@@ -4,6 +4,7 @@ _vehiclePlayer = vehicle player;
 
 {
 	if (_vehiclePlayer != _x) then {
+		deleteVehicleCrew _x;
 		deleteVehicle _x;
 	}
 } forEach vehicles;
