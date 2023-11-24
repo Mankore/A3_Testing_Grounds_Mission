@@ -37,7 +37,4 @@ if (count _hitPoints != 0) then {
 	};
 };
 
-if (!isNull (uiNameSpace getVariable "damageTrackerTextControl")) then {
-	_damageTextControl = uiNameSpace getVariable "damageTrackerTextControl";
-	_damageTextControl ctrlSetStructuredText _string;
-}
+[_string] execVM "gui\damageTracker\setText.sqf";
