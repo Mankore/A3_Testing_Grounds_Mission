@@ -26,5 +26,6 @@ switch (_unit) do
 
 _text = format ["%1", _seat];
 _rightText = str(_damage);
+_textColor = [0.388, 0.353, 1, 1];
 
-[_text, _rightText] execVM "gui\damageSideLog\addListboxItem.sqf";
+[_text, _rightText, _textColor] execVM "gui\damageSideLog\addListboxItem.sqf";

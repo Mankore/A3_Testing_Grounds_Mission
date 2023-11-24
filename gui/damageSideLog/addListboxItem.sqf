@@ -1,4 +1,4 @@
-params ["_text", "_rightText"];
+params ["_text", "_rightText", "_textColor"];
 
 _maxItems = 20;
 
@@ -12,6 +12,10 @@ if (!isNull (uiNameSpace getVariable "listboxControl")) then {
 	_listboxControl = uiNameSpace getVariable "listboxControl";
 
 	_index = _listboxControl lbAdd format ["%1: %2", listBoxCounter,  _text];
+	if (!isNil "_textColor") then {
+		hint str _textColor;
+		_listboxControl lbSetColor [_index, _textColor];
+	};
 
 	_listboxControl lbSetTextRight [_index, _rightText];
 	
