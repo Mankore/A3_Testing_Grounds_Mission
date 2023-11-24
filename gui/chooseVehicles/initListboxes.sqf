@@ -31,5 +31,5 @@ _ctrlTargetBlue ctrlAddEventHandler ["LBSelChanged", {
 	_ctrlTargetBlue lbSetTextRight [_forEachIndex, str(_x select 1)];
 } forEach BlueShop;
 
-// lbSetCurSel [_targetRedIdc, redSelectedIdx];
-// lbSetCurSel [_targetBlueIdc, blueSelectedIdx];
+lbSetCurSel [_targetRedIdc, redSelectedIdx];
+lbSetCurSel [_targetBlueIdc, blueSelectedIdx];
