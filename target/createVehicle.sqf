@@ -3,3 +3,4 @@ _veh = _vehName createVehicle _position;
 _veh setDir _playerDir + _rotation;
 
 [_veh] call compile preprocessFile "target\addVehicleHandlers.sqf";
+[_veh] call compile preprocessFile "target\createCrew.sqf";
