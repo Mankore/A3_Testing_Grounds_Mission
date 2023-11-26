@@ -5,8 +5,8 @@ if (!isNil "_display") then {
 		"MKR_SideLayer" cutText ["", "PLAIN"];
 		if (true) exitWith {};
 	} else {
-		call compile preprocessFile "gui\damageSideLog\init.sqf";
+		call initDamageSideLog;
 	}
 } else {
-	call compile preprocessFile "gui\damageSideLog\init.sqf";
+	call initDamageSideLog;
 };

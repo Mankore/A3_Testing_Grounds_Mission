@@ -8,6 +8,6 @@ _text = if (_hitpoint != "") then {
 	"TOTAL"
 };
 _rightText = str(_damage);
-_color = [_hitPoint] call compile preprocessFile "target\utils\getRGBAColorByHitpoint.sqf";
+_color = [_hitPoint] call getRGBAColorByHitpoint;
 
 [_text, _rightText, _color] execVM "gui\damageSideLog\addListboxItem.sqf";

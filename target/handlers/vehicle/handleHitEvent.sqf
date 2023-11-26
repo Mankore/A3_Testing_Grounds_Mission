@@ -25,7 +25,7 @@ if (count _hitPoints != 0) then {
 			if (_Indx != -1) then {
 				_name = _hitNames select _Indx;
 				_hitValue = str (_hitValues select _Indx);
-				_color = [_name] call compile preprocessFile "target\utils\getHEXColorByHitpoint.sqf";
+				_color = [_name] call getHEXColorByHitpoint;
 				
 				_name = parseText format["<t color='%2'>%1</t>", _name, _color];
 				_hitValue = parseText format["<t color='%2'>%1</t>", _hitValue, _color];

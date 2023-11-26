@@ -16,6 +16,6 @@
 	_veh = createVehicle [_name, _pos, [], 0, "CAN_COLLIDE"];
 	_veh setDir _dir;
 
-	[_veh] call compile preprocessFile "target\addVehicleHandlers.sqf";
-	[_veh] call compile preprocessFile "target\createCrew.sqf";
+	[_veh] execVM "target\addVehicleHandlers.sqf";
+	[_veh] execVM "target\createCrew.sqf";
 };

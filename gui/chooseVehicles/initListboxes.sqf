@@ -8,7 +8,7 @@ _ctrlTargetRed ctrlAddEventHandler ["LBSelChanged", {
 	lastSelectedShop = 0;
 
 	_shopEntry = RedShop select redSelectedIdx;
-	[_shopEntry select 0] call compile preprocessFile "gui\chooseVehicles\vehicleInfo.sqf";
+	[_shopEntry select 0] call showVehicleInfo;
 }];
 
 _ctrlTargetBlue ctrlAddEventHandler ["LBSelChanged", {
@@ -16,7 +16,7 @@ _ctrlTargetBlue ctrlAddEventHandler ["LBSelChanged", {
 	lastSelectedShop = 1;
 
 	_shopEntry = BlueShop select blueSelectedIdx;
-	[_shopEntry select 0] call compile preprocessFile "gui\chooseVehicles\vehicleInfo.sqf";
+	[_shopEntry select 0] call showVehicleInfo;
 }];
 
 {
@@ -31,5 +31,10 @@ _ctrlTargetBlue ctrlAddEventHandler ["LBSelChanged", {
 	_ctrlTargetBlue lbSetTextRight [_forEachIndex, str(_x select 1)];
 } forEach BlueShop;
 
-lbSetCurSel [_targetRedIdc, redSelectedIdx];
-lbSetCurSel [_targetBlueIdc, blueSelectedIdx];
+if (lastSelectedShop == 0) then {
+	lbSetCurSel [_targetBlueIdc, blueSelectedIdx];
+	lbSetCurSel [_targetRedIdc, redSelectedIdx];
+} else {
+	lbSetCurSel [_targetRedIdc, redSelectedIdx];
+	lbSetCurSel [_targetBlueIdc, blueSelectedIdx];
+};

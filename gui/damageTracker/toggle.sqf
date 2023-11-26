@@ -5,8 +5,8 @@ if (!isNil "_display") then {
 		"MKR_DamageTrackerLayer" cutText ["", "PLAIN"];
 		if (true) exitWith {};
 	} else {
-		call compile preprocessFile "gui\damageTracker\init.sqf";
+		call initDamageTracker;
 	}
 } else {
-	call compile preprocessFile "gui\damageTracker\init.sqf";
+	call initDamageTracker;
 };
