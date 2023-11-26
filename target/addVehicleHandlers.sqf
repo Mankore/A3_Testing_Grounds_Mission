@@ -1,13 +1,13 @@
 params ["_veh"];
 _veh addEventHandler ["Killed", {
-	_this execVM "target\handlers\vehicle\handleVehicleKilledEvent.sqf";
+	_this call handleVehicleKilled;
 }];
 _veh addEventHandler ["HandleDamage", {
-	_this execVM "target\handlers\vehicle\handleDamageEvent.sqf";
+	_this call handleVehicleDamage;
 	_this select 2;
 }];
 _veh addEventHandler ["Hit", {
-	_this execVM "target\handlers\vehicle\handleHitEvent.sqf";
+	_this call handleVehicleHit;
 }];
 
 /*

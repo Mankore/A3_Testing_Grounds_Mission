@@ -7,7 +7,7 @@ lastSelectedShop = 0; // 0 => red shop, 1 => blue shop
 
 RedShop = call compile preprocessFile "shops\red.sqf";
 BlueShop = call compile preprocessFile "shops\blue.sqf";
-[] execVM "utils\defineFunctions.sqf";
+execVM "utils\defineFunctions.sqf";
 
 player addAction ["<t color='#FF0000'>Chose Vehicles</t>", {
 	execVM "gui\chooseVehicles\init.sqf";

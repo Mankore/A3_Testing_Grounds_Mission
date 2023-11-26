@@ -11,6 +11,6 @@ civilian createVehicleCrew _veh;
 	}];
 
 	_x addEventHandler ["Hit", {
-		_this execVM "target\handlers\crew\handleHitEvent.sqf";
+		_this call handleCrewHit;
 	}];
 } forEach crew _veh;

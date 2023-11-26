@@ -19,5 +19,5 @@ if ((!isNull gunner _veh) || (_veh emptyPositions "gunner" > 0)) then {
 };
 
 _veh addEventHandler ["Fired", {
-	_this execVM "player\handleFiredEvent.sqf";
+	_this call handlePlayerFired;
 } ];
