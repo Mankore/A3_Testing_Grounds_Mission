@@ -21,6 +21,10 @@ player addAction ["Toggle Damage Tracker", {
 	execVM "gui\damageTracker\toggle.sqf";
 }, nil, 998];
 
+player addAction ["Open Arsenal", {
+	["Open", true] spawn BIS_fnc_arsenal;
+}, nil, 997];
+
 // spawn launcher
 /*
 	[] spawn
