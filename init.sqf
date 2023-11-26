@@ -23,7 +23,7 @@ player addAction ["Toggle Damage Tracker", {
 
 player addAction ["Open Arsenal", {
 	["Open", true] spawn BIS_fnc_arsenal;
-}, nil, 997];
+}, nil, 996];
 
 // spawn launcher
 /*
