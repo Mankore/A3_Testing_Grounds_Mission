@@ -27,7 +27,7 @@ _relpos3 = _vehiclePlayer getRelPos [_distance, -_tarSpread*2];
 _vehMap = [1, 2, 3, 4] createHashMapFromArray [[_relpos, 0], [_relpos1, 90 + _tarSpread], [_relpos2, 180 - _tarSpread], [_relpos3, 270 - _tarspread * 2]];
 
 {
-	[_tarName, _y select 0, _y select 1, _playerDir] execVM "target\createVehicle.sqf";
+	[_tarName, _y select 0, _playerDir + (_y select 1)] execVM "target\createVehicle.sqf";
 	
 } forEach _vehMap;
 

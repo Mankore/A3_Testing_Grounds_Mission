@@ -13,9 +13,5 @@
 		deleteVehicle _x
 	} forEach _objects;
 
-	_veh = createVehicle [_name, _pos, [], 0, "CAN_COLLIDE"];
-	_veh setDir _dir;
-
-	[_veh] execVM "target\addVehicleHandlers.sqf";
-	[_veh] execVM "target\createCrew.sqf";
+	[_name, _pos, _dir] execVM "target\createVehicle.sqf";
 };
