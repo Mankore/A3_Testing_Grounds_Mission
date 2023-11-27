@@ -13,15 +13,15 @@ player addAction ["<t color='#FF0000'>Chose Vehicles</t>", {
 	execVM "gui\chooseVehicles\init.sqf";
 }, nil, 999];
 
-player addAction ["Toggle Damage Log", {
+player addAction ["<t color='#00FF00'>Toggle Damage Log</t>", {
 	execVM "gui\damageSideLog\toggle.sqf";
 }, nil, 997];
 
-player addAction ["Toggle Damage Tracker", {
+player addAction ["<t color='#00FF00'>Toggle Damage Tracker</t>", {
 	execVM "gui\damageTracker\toggle.sqf";
 }, nil, 998];
 
-player addAction ["Open Arsenal", {
+player addAction ["<t color='#00FFFF'>Open Arsenal</t>", {
 	["Open", true] spawn BIS_fnc_arsenal;
 }, nil, 996];
 
