@@ -4,9 +4,14 @@ _display = findDisplay 1234;
 _vehInfoIdc = 1100;
 _ctrlText = _display displayCtrl _vehInfoIdc;
 
+_maxLoad = (configFile >> "CfgVehicles" >> _vehClassName >> "maximumLoad") call BIS_fnc_getCfgData;
+_maxSpeed = (configFile >> "CfgVehicles" >> _vehClassName >> "maxSpeed") call BIS_fnc_getCfgData;
 _turrets = (configFile >> "CfgVehicles" >> _vehClassName >> "Turrets") call BIS_fnc_getCfgSubClasses;
 
 _finalText = composeText [_vehClassName, lineBreak];
+_finalText = composeText [_finalText, format ["Max Load: %1", _maxLoad], lineBreak];
+_finalText = composeText [_finalText, format ["Max Speed: %1", _maxSpeed], lineBreak];
+
 
 // Turrets / Mags / ammo info
 _finalText = composeText [_finalText, lineBreak, "Turrets:"];
