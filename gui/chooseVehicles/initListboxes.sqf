@@ -19,17 +19,19 @@ _ctrlTargetBlue ctrlAddEventHandler ["LBSelChanged", {
 	[_shopEntry select 0] call showVehicleInfo;
 }];
 
-{
-	_name = (configfile >> "CfgVehicles" >> (_x select 0) >> "displayName") call BIS_fnc_getCfgData;
-	_ctrlTargetRed lbAdd _name;
-	_ctrlTargetRed lbSetTextRight [_forEachIndex, str(_x select 1)];
-} forEach RedShop;
+fncInitListboxItems = {
+	params ["_shop", "_ctrlListbox"];
+	{
+		_name = (configfile >> "CfgVehicles" >> (_x select 0) >> "displayName") call BIS_fnc_getCfgData;
+		if (!isNil "_name") then {
+			_ctrlListbox lbAdd _name;
+			_ctrlListbox lbSetTextRight [_forEachIndex, str(_x select 1)];
+		}
+	} forEach _shop;
+};
 
-{
-	_name = (configfile >> "CfgVehicles" >> (_x select 0) >> "displayName") call BIS_fnc_getCfgData;
-	_ctrlTargetBlue lbAdd _name;
-	_ctrlTargetBlue lbSetTextRight [_forEachIndex, str(_x select 1)];
-} forEach BlueShop;
+[RedShop, _ctrlTargetRed] call fncInitListboxItems;
+[BlueShop, _ctrlTargetBlue] call fncInitListboxItems;
 
 if (lastSelectedShop == 0) then {
 	lbSetCurSel [_targetBlueIdc, blueSelectedIdx];
