@@ -89,4 +89,17 @@ BLUE_ShopTank = [
 	["rhsusf_m109_usarmy", 92, ["FixAmmo"], ["standard", "Desert"]]
 ];
 
-BLUE_ShopCar + BLUE_ShopTank
+BLUE_Vanilla = [
+	["B_MRAP_01_hmg_F"],
+	["B_LSV_01_AT_F"],
+	["B_APC_Wheeled_01_cannon_F"],
+	["B_APC_Tracked_01_rcws_F"],
+	["B_AFV_Wheeled_01_cannon_F"],
+	["B_AFV_Wheeled_01_up_cannon_F"],
+	["B_APC_Tracked_01_CRV_F"],
+	["B_APC_Tracked_01_AA_F"],
+	["B_MBT_01_cannon_F"],
+	["B_MBT_01_TUSK_F"]
+];
+
+BLUE_ShopCar + BLUE_ShopTank + BLUE_Vanilla

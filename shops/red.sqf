@@ -85,4 +85,16 @@ RED_ShopTank = [
 	["rhs_2s3_tv", 62, ["FixAmmo"], ["standard", "rhs_sand", "rhs_tri"]]
 ];
 
-RED_ShopCar + RED_ShopTank
+RED_Vanilla = [
+	["O_APC_Tracked_02_cannon_F"],
+	["O_APC_Wheeled_02_rcws_v2_F"],
+	["O_MRAP_02_hmg_F"],
+	["O_LSV_02_AT_F"],
+	["O_APC_Tracked_02_AA_F"],
+	["O_MBT_02_cannon_F"],
+	["O_MBT_04_cannon_F"],
+	["O_MBT_04_command_F"],
+	["O_MBT_02_railgun_F"]
+];
+
+RED_ShopCar + RED_ShopTank + RED_Vanilla
