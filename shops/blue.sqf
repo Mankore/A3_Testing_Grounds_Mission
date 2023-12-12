@@ -102,4 +102,13 @@ BLUE_Vanilla = [
 	["B_MBT_01_TUSK_F"]
 ];
 
-BLUE_ShopCar + BLUE_ShopTank + BLUE_Vanilla
+GREEN_Vanilla = [
+	["I_APC_Wheeled_03_cannon_F"],
+	["I_APC_tracked_03_cannon_F"],
+	["I_MRAP_03_hmg_F"],
+	["I_LT_01_AT_F"],
+	["I_LT_01_cannon_F"],
+	["I_MBT_03_cannon_F"]
+];
+
+BLUE_ShopCar + BLUE_ShopTank + BLUE_Vanilla + GREEN_Vanilla
